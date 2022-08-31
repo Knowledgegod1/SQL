@@ -1,0 +1,20 @@
+CREATE TABLE store_items(id integer primary key, name text, quantity text, price integer);
+INSERT INTO store_items values(1,"tshirt",3,15);
+INSERT INTO store_items values(2, "jeans",5,4);
+Insert into store_items values (3, "shoes",2,6);
+INSERT into store_items values (4, "jacket",5,6);
+INSERT into store_items values (5, "socks",7,8);
+SELECT * FROM store_items;
+
+SELECT * FROM store_items where name order by price;
+
+SELECT name, sum(quantity) FROM store_items Group by price;
+
+--display the database ordered by price.
+SELECT * FROM store 
+ORDER BY price asc;
+
+what is the average price of clothing items?
+SELECT AVG(price) "avg store_items price"
+FROM store
+where section= 'quantity';
